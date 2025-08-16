@@ -1,15 +1,14 @@
+import 'package:counter/model/counter_model.dart';
 import 'package:counter/view/counter_view.dart';
 import 'package:counter/viewmodel/counter_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(
-    ChangeNotifierProvider(
-      create: (context) => CounterViewModel(),
-      child: const MainApp(),
-    )
-  );
+  runApp(ChangeNotifierProvider(
+    create: (context) => CounterViewModel(),
+    child: const MainApp(),
+  ));
 }
 
 class MainApp extends StatelessWidget {
@@ -18,7 +17,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: CounterView()
+      home: CounterView(),
     );
-  )
+  }
 }

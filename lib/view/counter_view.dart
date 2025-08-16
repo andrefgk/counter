@@ -1,10 +1,12 @@
+import 'package:counter/viewmodel/counter_viewmodel.dart';
 import 'package:flutter/material.dart';
-import '';
+import 'package:provider/provider.dart';
 
 class CounterView extends StatelessWidget {
   const CounterView({super.key});
   @override
   Widget build(BuildContext context) {
+    final counterViewModel = Provider.of<CounterViewModel>(context);
     // TODO: implement build
     return Scaffold(
         appBar: AppBar(
@@ -14,18 +16,27 @@ class CounterView extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text("Contador:"),
+              Text("Contador: ${counterViewModel.count}"),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      counterViewModel.increment();
+                    },
                     child: Icon(Icons.add),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
-                      CounterViewModel.decrement(),
+                    onPressed: () {
+                      counterViewModel.decrement();
+                    },
                     child: Icon(Icons.remove),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      counterViewModel.reset();
+                    },
+                    child: Icon(Icons.refresh),
                   )
                 ],
               )
@@ -34,3 +45,4 @@ class CounterView extends StatelessWidget {
         ));
   }
 }
+//
