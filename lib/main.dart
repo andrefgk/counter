@@ -1,6 +1,6 @@
 import 'package:counter/model/counter_model.dart';
 import 'package:counter/view/counter_view.dart';
-import 'package:counter/viewmodel/counter_viewmodel.dart';
+import 'package:counter/view_model/counter_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

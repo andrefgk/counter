@@ -1,4 +1,4 @@
-import 'package:counter/viewmodel/counter_viewmodel.dart';
+import 'package:counter/view_model/counter_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -7,7 +7,7 @@ class CounterView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final counterViewModel = Provider.of<CounterViewModel>(context);
-    // TODO: implement build
+    // TODO: implementar build
     return Scaffold(
         appBar: AppBar(
           title: Text("Contador Con MVVM"),
@@ -45,4 +45,3 @@ class CounterView extends StatelessWidget {
         ));
   }
 }
-//
