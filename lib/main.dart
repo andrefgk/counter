@@ -7,7 +7,7 @@ void main() {
   runApp(
     ChangeNotifierProvider(
       create: (context) => CounterViewModel(),
-      chilf: const MainApp(),
+      child: const MainApp(),
     )
   );
 }
@@ -20,5 +20,5 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       home: CounterView()
     );
-  }
+  )
 }
